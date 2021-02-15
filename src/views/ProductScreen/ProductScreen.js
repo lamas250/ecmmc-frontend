@@ -55,7 +55,7 @@ function ProductScreen(porps) {
                                     {product.countInStock > 0 ? (
                                         <span className="success">In Stock</span>
                                     ) : (
-                                        <span className="error">Unavailable</span>
+                                        <span className="danger">Unavailable</span>
                                     )}
                                 </div>
                             </div>
