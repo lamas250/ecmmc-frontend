@@ -1,8 +1,7 @@
-import Products from "./components/Products/Products";
-import data from "./data";
 import { BrowserRouter, Route } from 'react-router-dom'
 import HomeScreen from "./views/HomeScreen/HomeScreen";
 import ProductScreen from "./views/ProductScreen/ProductScreen";
+import React from 'react';
 
 function App() {
   return (
