@@ -1,6 +1,6 @@
 module.exports = {
     "env": {
-        "browser": true,
+        "node": true,
         "es2021": true
     },
     "extends": [
@@ -19,6 +19,7 @@ module.exports = {
     ],
     "rules": {
       "react/prop-types": "off",
-      "no-case-declarations": "off"
+      "no-case-declarations": "off",
+      "no-unused-vars": 0
     }
 };

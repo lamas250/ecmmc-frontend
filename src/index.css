@@ -120,7 +120,10 @@ html {
   }
   .col-2 {
     flex: 2 1 50rem;
-}
+  }
+  .min-30 {
+    min-width: 30rem;
+  }
   /* Image */
   img {
     border-radius: 0.5rem;
@@ -131,7 +134,10 @@ html {
   }
   img.large {
       width: 100%;
-      
+  }
+  img.small {
+    max-width: 5rem;
+    width: 100%;
   }
   
   /* Card */
@@ -187,5 +193,44 @@ html {
     color: #20a020;
     background-color: #e0ffe0;
   }
-  
+
+  /* FORM */
+  .form {
+    max-width: 60rem;
+    margin: 0;
+  }
+
+  .form > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .form label{
+    margin: 1rem 0;
+    display: block;
+  }
+  .form input{
+    background: #e6f1fa;
+  }
+
+/* DROPDOWN */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content{
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #203040;
+  margin: 0;
+  margin-top: 0.9;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
   
