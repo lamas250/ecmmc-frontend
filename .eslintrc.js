@@ -3,6 +3,13 @@ module.exports = {
         "node": true,
         "es2021": true
     },
+    "globals": {
+      "wat": false,
+      "localStorage": false,
+      "document": false,
+      "window": false,
+      "alert": false
+    },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"

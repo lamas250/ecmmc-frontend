@@ -194,6 +194,10 @@ html {
     background-color: #e0ffe0;
   }
 
+  .loading {
+    display: block !important;
+  }
+
   /* FORM */
   .form {
     max-width: 60rem;
@@ -233,4 +237,16 @@ html {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-  
+  /* Checkout-steps */
+  .checkout-steps > div {
+    border-top:0.3rem #c0c0c0 solid;
+    color: #c0c0c0;
+    flex: 1;
+    padding: 1rem;
+    font-weight: bold;
+  }
+
+  .checkout-steps > div.active {
+    border-top-color: #f08000;
+    color: #f08000;
+  }
