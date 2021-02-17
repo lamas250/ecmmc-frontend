@@ -8,6 +8,8 @@ import SigninScreen from './views/Signin/SigninScreen';
 import { signout } from './redux/actions/userActions';
 import RegisterScreen from './views/Register/RegisterScreen';
 import ShippingScreen from './views/Shipping/ShippingScreen';
+import PaymentScreen from './views/Payment/PaymentScreen';
+import PlaceOrder from './views/PlaceOrder/PlaceOrder';
 
 function App() {
 
@@ -56,6 +58,8 @@ function App() {
                 <Route path="/signin" component={SigninScreen}></Route>
                 <Route path="/register" component={RegisterScreen}></Route>
                 <Route path="/shipping" component={ShippingScreen}></Route>
+                <Route path="/payment" component={PaymentScreen}></Route>
+                <Route path="/placeorder" component={PlaceOrder}></Route>
                 <Route path="/" component={HomeScreen} exact></Route>
             </main>
             <footer className="row center">All right reserved</footer>
