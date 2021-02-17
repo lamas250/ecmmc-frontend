@@ -10,6 +10,7 @@ import RegisterScreen from './views/Register/RegisterScreen';
 import ShippingScreen from './views/Shipping/ShippingScreen';
 import PaymentScreen from './views/Payment/PaymentScreen';
 import PlaceOrder from './views/PlaceOrder/PlaceOrder';
+import OrderScreen from './views/OrderScreen/OrderScreen';
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
                 <Route path="/shipping" component={ShippingScreen}></Route>
                 <Route path="/payment" component={PaymentScreen}></Route>
                 <Route path="/placeorder" component={PlaceOrder}></Route>
+                <Route path="/order/:id" component={OrderScreen}></Route>
                 <Route path="/" component={HomeScreen} exact></Route>
             </main>
             <footer className="row center">All right reserved</footer>
