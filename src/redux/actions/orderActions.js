@@ -75,7 +75,6 @@ export const listOrderMine = () => async(dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`
       }
     });
-    console.log(data);
     dispatch({type: ORDER_MINE_LIST_SUCCESS, payload: data});
   }catch(error){
     const message = error.response && error.response.data.message

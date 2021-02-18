@@ -2,7 +2,7 @@ import { BrowserRouter, Link, Route } from 'react-router-dom'
 import HomeScreen from "./views/HomeScreen/HomeScreen";
 import ProductScreen from "./views/ProductScreen/ProductScreen";
 import CartScreen from './views/CartScreen/CartScreen'
-import React from 'react';
+import React, { Profiler } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import SigninScreen from './views/Signin/SigninScreen';
 import { signout } from './redux/actions/userActions';
@@ -12,6 +12,7 @@ import PaymentScreen from './views/Payment/PaymentScreen';
 import PlaceOrder from './views/PlaceOrder/PlaceOrder';
 import OrderScreen from './views/OrderScreen/OrderScreen';
 import OrderHistory from './views/OrderHistory/OrderHistory';
+import Profile from './views/ProfileScreen/Profile';
 
 function App() {
 
@@ -44,6 +45,9 @@ function App() {
                       <Link to="#">{userInfo.name}<i className="fa fa-caret-down"></i>{' '}</Link>
                       <ul className="dropdown-content">
                         <li>
+                          <Link to="/profile" >Profile</Link>
+                        </li>
+                        <li>
                           <Link to="/orderhistory">Order History</Link>
                         </li>
                         <li>
@@ -67,6 +71,7 @@ function App() {
                 <Route path="/placeorder" component={PlaceOrder}></Route>
                 <Route path="/order/:id" component={OrderScreen}></Route>
                 <Route path="/orderhistory" component={OrderHistory}></Route>
+                <Route path="/profile" component={Profile}></Route>
                 <Route path="/" component={HomeScreen} exact></Route>
             </main>
             <footer className="row center">All right reserved</footer>

@@ -13,7 +13,6 @@ export default function OrderHistory(props) {
   useEffect(() => {
    
     dispatch(listOrderMine());
-    console.log(orders)
   },[dispatch])
 
   return (
