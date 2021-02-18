@@ -13,6 +13,7 @@ import PlaceOrder from './views/PlaceOrder/PlaceOrder';
 import OrderScreen from './views/OrderScreen/OrderScreen';
 import OrderHistory from './views/OrderHistory/OrderHistory';
 import Profile from './views/ProfileScreen/Profile';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
 
@@ -70,8 +71,8 @@ function App() {
                 <Route path="/payment" component={PaymentScreen}></Route>
                 <Route path="/placeorder" component={PlaceOrder}></Route>
                 <Route path="/order/:id" component={OrderScreen}></Route>
-                <Route path="/orderhistory" component={OrderHistory}></Route>
-                <Route path="/profile" component={Profile}></Route>
+                <PrivateRoute path="/orderhistory" component={OrderHistory}></PrivateRoute>
+                <PrivateRoute path="/profile" component={Profile}></PrivateRoute>
                 <Route path="/" component={HomeScreen} exact></Route>
             </main>
             <footer className="row center">All right reserved</footer>
