@@ -11,6 +11,7 @@ import ShippingScreen from './views/Shipping/ShippingScreen';
 import PaymentScreen from './views/Payment/PaymentScreen';
 import PlaceOrder from './views/PlaceOrder/PlaceOrder';
 import OrderScreen from './views/OrderScreen/OrderScreen';
+import OrderHistory from './views/OrderHistory/OrderHistory';
 
 function App() {
 
@@ -43,6 +44,9 @@ function App() {
                       <Link to="#">{userInfo.name}<i className="fa fa-caret-down"></i>{' '}</Link>
                       <ul className="dropdown-content">
                         <li>
+                          <Link to="/orderhistory">Order History</Link>
+                        </li>
+                        <li>
                           <Link to="#signout" onClick={signoutHandler}>Sign Out</Link>
                         </li>
                       </ul>
@@ -62,6 +66,7 @@ function App() {
                 <Route path="/payment" component={PaymentScreen}></Route>
                 <Route path="/placeorder" component={PlaceOrder}></Route>
                 <Route path="/order/:id" component={OrderScreen}></Route>
+                <Route path="/orderhistory" component={OrderHistory}></Route>
                 <Route path="/" component={HomeScreen} exact></Route>
             </main>
             <footer className="row center">All right reserved</footer>
