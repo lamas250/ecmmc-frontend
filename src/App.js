@@ -14,6 +14,8 @@ import OrderScreen from './views/OrderScreen/OrderScreen';
 import OrderHistory from './views/OrderHistory/OrderHistory';
 import Profile from './views/ProfileScreen/Profile';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import AdmProduct from './views/Admin/Product/AdmProduct';
+import AdminRoute from './components/AdminRoute/AdminRoute';
 
 function App() {
 
@@ -68,6 +70,9 @@ function App() {
                         <li>
                           <Link to="/dashboad" >Dashboard</Link>
                         </li>
+                        <li>
+                          <Link to="/admin/products" >Products</Link>
+                        </li>
                       </ul>
                     </div>
                   )
@@ -85,6 +90,7 @@ function App() {
                 <Route path="/order/:id" component={OrderScreen}></Route>
                 <PrivateRoute path="/orderhistory" component={OrderHistory}></PrivateRoute>
                 <PrivateRoute path="/profile" component={Profile}></PrivateRoute>
+                <AdminRoute path="/admin/products" component={AdmProduct}></AdminRoute>
                 <Route path="/" component={HomeScreen} exact></Route>
             </main>
             <footer className="row center">All right reserved</footer>
