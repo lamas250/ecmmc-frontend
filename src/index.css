@@ -219,6 +219,10 @@ html {
     background: #e6f1fa;
   }
 
+  .form select{
+    background: #e6f1fa;
+  }
+
 /* DROPDOWN */
 .dropdown {
   display: inline-block;

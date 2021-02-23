@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 import LoadingBox from '../../../components/LoadingBox/LoadingBox';
 import MessageBox from '../../../components/MessageBox/MessageBox';
-import { listProducts } from '../../../redux/actions/productActions';
+import { deleteProduct, listProducts } from '../../../redux/actions/productActions';
 
 export default function AdmProduct() {
     const productList = useSelector(state => state.productList);
@@ -14,8 +15,12 @@ export default function AdmProduct() {
         dispatch(listProducts());
     },[dispatch])
 
-    const editHandler = (id) => {
-        console.log(id)
+    const actionHandler = (action, id) => {
+        if(action === "edit"){
+            console.log("edit",id)
+        }else{
+            dispatch(deleteProduct(id));
+        }
     }
 
     return (
@@ -26,7 +31,12 @@ export default function AdmProduct() {
                 error ? <MessageBox variant="danger">{error}</MessageBox>
                 :
                 (<>
-                    <h1>Products</h1>
+                    <div className="row">
+                        <h1>Products</h1>
+                        <Link to="/admin/products/create">
+                            <button className="alert-success">Create</button>
+                        </Link>
+                    </div>
                     <table className="table">
                         <thead>
                             <tr>
@@ -47,9 +57,12 @@ export default function AdmProduct() {
                                     <td>
                                         <button 
                                             className="alert-info"
-                                            onClick={() => editHandler(p._id)}
+                                            onClick={() => actionHandler("edit", p._id)}
                                         >Editar</button>
-                                        <button className="alert-danger">Excluir</button>
+                                        <button 
+                                            className="alert-danger"
+                                            onClick={() => actionHandler("delete", p._id)}
+                                        >Excluir</button>
                                     </td>
                                 </tr>
                             ))}
